@@ -2,64 +2,111 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+    <div className="mx-auto max-w-3xl px-6 py-16">
+      <header className="mb-16">
+        <div className="flex items-center gap-4">
+          <Image
+            src="/chaossi.jpg"
+            alt="Chaossi icon"
+            width={64}
+            height={64}
+            className="object-cover shadow-lg"
+          />
+
+          <div>
+            <h1 className="text-4xl font-bold tracking-tight">Chaossi</h1>
+            <p className="mt-1 text-lg text-gray-600">
+              Web Developer building realtime applications.
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold">About</h2>
+        <p className="mt-4 leading-7 text-gray-700">
+          Next.js / TypeScript
+          を中心に、Socket通信を利用したリアルタイムWebアプリケーションを開発しています。
+          大学では物理学を専攻しており、個人開発ではオンラインボードゲームサービスを運用しています。
+        </p>
+
+        <ul className="mt-4 space-y-2">
+          <li>
+            X{" "}
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="https://x.com/ykswclm"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
+              @ykswclm
+            </a>
+          </li>
+          <li>
+            GitHub{" "}
             <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="https://github.com/yksw-clm"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
             >
-              Learning
-            </a>{" "}
-            center.
+              @yksw-clm
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold">Works</h2>
+
+        <article className="mt-4 rounded-2xl border p-6">
+          <h3 className="text-xl font-semibold">Tetra Board</h3>
+          <p className="mt-3 leading-7 text-gray-700">
+            ブラウザ上でボードゲームのオンライン対戦ができるWebサービスです。
+            ルーム作成・入室・リアルタイムな盤面同期に対応しています。
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+
+          <ul className="mt-4 flex flex-wrap gap-2">
+            <li className="rounded-full border px-3 py-1 text-sm">React</li>
+            <li className="rounded-full border px-3 py-1 text-sm">
+              TypeScript
+            </li>
+            <li className="rounded-full border px-3 py-1 text-sm">Socket</li>
+          </ul>
+
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://tetraboard.net"
             target="_blank"
             rel="noopener noreferrer"
+            className="mt-5 inline-block underline"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
+            サイトを見る
           </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+        </article>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold">Contact</h2>
+        <p className="mt-4 leading-7 text-gray-700">
+          お仕事のご依頼・ご相談は以下のメールアドレスまでご連絡ください。
+        </p>
+
+        <p className="mt-3">
+          <a href="mailto:ykswclm@chaossi.com" className="underline">
+            ykswclm@chaossi.com
           </a>
-        </div>
-      </main>
+        </p>
+
+        <p className="mt-4 text-gray-700">
+          以下をご記載いただけるとスムーズです。
+        </p>
+        <ul className="mt-3 list-disc space-y-2 pl-6 text-gray-700">
+          <li>ご依頼内容</li>
+          <li>プロジェクト概要</li>
+          <li>スケジュール・予算</li>
+          <li>参考URL・資料など</li>
+        </ul>
+      </section>
     </div>
   );
 }
