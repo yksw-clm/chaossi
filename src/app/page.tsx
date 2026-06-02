@@ -83,6 +83,33 @@ export default function Home() {
             サイトを見る
           </a>
         </article>
+
+        <article className="mt-4 rounded-2xl border p-6">
+          <h3 className="text-xl font-semibold">ことばスプリント</h3>
+          <p className="mt-3 leading-7 text-gray-700">
+            「あたま」の文字と「うしろ」の文字が決められていて、長い文字数の言葉が
+            思い浮かんだ人がその文字数分得点を獲得して、それで勝負する遊びです。
+          </p>
+
+          <ul className="mt-4 flex flex-wrap gap-2">
+            <li className="rounded-full border px-3 py-1 text-sm">React</li>
+            <li className="rounded-full border px-3 py-1 text-sm">
+              Cloudflare Workers
+            </li>
+            <li className="rounded-full border px-3 py-1 text-sm">
+              Durable Objects
+            </li>
+          </ul>
+
+          <a
+            href="https://kotobasprint.tkm-nyoro1218.workers.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-block underline"
+          >
+            サイトを見る
+          </a>
+        </article>
       </section>
 
       <section>
