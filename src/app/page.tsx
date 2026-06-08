@@ -101,6 +101,17 @@ export default function Home() {
               @yksw-clm
             </a>
           </li>
+          <li>
+            Zenn{" "}
+            <a
+              href="https://zenn.dev/ykswclm"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+            >
+              @ykswclm
+            </a>
+          </li>
         </ul>
       </section>
 
@@ -163,7 +174,7 @@ export default function Home() {
       <section>
         <h2 className="text-2xl font-semibold">Looking for</h2>
         <p className="mt-4 leading-7 text-gray-700">
-          Webフロントエンドやリアルタイムアプリケーションに関わる開発業務を探しています。
+          フロントエンド、バックエンド、Webフルスタック開発業務を探しています。
         </p>
       </section>
     </div>
