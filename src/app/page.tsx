@@ -1,6 +1,21 @@
 import Image from "next/image";
 
 export default function Home() {
+  const strengths = [
+    "React / Next.js / TypeScript を使ったフロントエンド実装",
+    "Socket 通信や Durable Objects を使ったリアルタイム同期",
+    "サービスの実装、公開、運用",
+  ];
+
+  const skills = [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "HTML / CSS",
+    "Cloudflare Workers",
+    "Durable Objects",
+  ];
+
   return (
     <div className="mx-auto max-w-3xl px-6 py-16">
       <header className="mb-16">
@@ -25,12 +40,36 @@ export default function Home() {
       <section className="mb-12">
         <h2 className="text-2xl font-semibold">About</h2>
         <p className="mt-4 leading-7 text-gray-700">
-          Next.js / TypeScript
-          を中心に、Socket通信を利用したリアルタイムWebアプリケーションを開発しています。
-          大学では物理学を専攻しており、個人開発ではオンラインボードゲームサービスを運用しています。
+          Next.js / React / TypeScript
+          を中心にWebアプリケーションを開発しています。特に、複数人が同時に操作するオンラインボードゲームや言葉遊びのサービスなど、
+          リアルタイム性のある体験づくりに関心があります。
         </p>
 
-        <ul className="mt-4 space-y-2">
+        <p className="mt-4 leading-7 text-gray-700">
+          ユーザーが迷わず使えるUI、保守しやすいコンポーネント設計、サービスとして動かし続けるための改善に注力しています。
+          自分で企画したアプリを公開まで持っていった経験を活かして、仕様の整理から実装、検証まで粘り強く取り組みます。
+        </p>
+
+        <div className="mt-6 grid gap-4">
+          <div className="rounded-lg border p-5">
+            <h3 className="font-semibold">できること</h3>
+            <ul className="mt-3 list-disc space-y-2 pl-5 leading-7 text-gray-700">
+              {strengths.map((strength) => (
+                <li key={strength}>{strength}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <ul className="mt-5 flex flex-wrap gap-2">
+          {skills.map((skill) => (
+            <li key={skill} className="rounded-full border px-3 py-1 text-sm">
+              {skill}
+            </li>
+          ))}
+        </ul>
+
+        <ul className="mt-5 space-y-2">
           <li>
             X{" "}
             <a
@@ -59,7 +98,7 @@ export default function Home() {
       <section className="mb-12">
         <h2 className="text-2xl font-semibold">Works</h2>
 
-        <article className="mt-4 rounded-2xl border p-6">
+        <article className="mt-4 rounded-lg border p-6">
           <h3 className="text-xl font-semibold">Tetra Board</h3>
           <p className="mt-3 leading-7 text-gray-700">
             ブラウザ上でボードゲームのオンライン対戦ができるWebサービスです。
@@ -84,7 +123,7 @@ export default function Home() {
           </a>
         </article>
 
-        <article className="mt-4 rounded-2xl border p-6">
+        <article className="mt-4 rounded-lg border p-6">
           <h3 className="text-xl font-semibold">ことばスプリント</h3>
           <p className="mt-3 leading-7 text-gray-700">
             「あたま」の文字と「うしろ」の文字が決められていて、長い文字数の言葉が
@@ -113,26 +152,10 @@ export default function Home() {
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold">Contact</h2>
+        <h2 className="text-2xl font-semibold">Looking for</h2>
         <p className="mt-4 leading-7 text-gray-700">
-          お仕事のご依頼・ご相談は以下のメールアドレスまでご連絡ください。
+          Webフロントエンドやリアルタイムアプリケーションに関わる開発業務を探しています。
         </p>
-
-        <p className="mt-3">
-          <a href="mailto:ykswclm@chaossi.com" className="underline">
-            ykswclm@chaossi.com
-          </a>
-        </p>
-
-        <p className="mt-4 text-gray-700">
-          以下をご記載いただけるとスムーズです。
-        </p>
-        <ul className="mt-3 list-disc space-y-2 pl-6 text-gray-700">
-          <li>ご依頼内容</li>
-          <li>プロジェクト概要</li>
-          <li>スケジュール・予算</li>
-          <li>参考URL・資料など</li>
-        </ul>
       </section>
     </div>
   );
