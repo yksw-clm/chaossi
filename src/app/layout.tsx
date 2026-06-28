@@ -1,21 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Chaossi | Web Developer",
+  title: "Chaossi | Web Engineer",
   description:
-    "Chaossiのポートフォリオ。Next.js、TypeScript、リアルタイムWebアプリケーションの制作実績を掲載しています。",
+    "Chaossiのポートフォリオ。Next.js、TypeScript、Firebaseを用いた実務経験と、React、Bun、Socket.IOを用いた個人開発を掲載しています。",
 };
 
 export default function RootLayout({
@@ -24,10 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="ja"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
+    <html lang="ja" className="h-full antialiased">
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
